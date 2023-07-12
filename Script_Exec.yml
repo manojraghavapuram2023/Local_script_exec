@@ -1,9 +1,0 @@
----
-  - name: execute a local script on the host
-    host: all
-    tasks: 
-      - name: copy file command
-        copy: src=/scripts/host.sh dest=/scripts/test
-      - name: execute script command
-        ansible.builtin.command: udo sh  /scripts/host.sh
-  
