@@ -1,6 +1,6 @@
 ---
   - name: execute a local script on the host
-    host: all
+    hosts: all
     become: false
     gather_facts: false
     tasks: 
