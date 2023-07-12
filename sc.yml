@@ -5,7 +5,9 @@
     gather_facts: false
     tasks: 
       - name: copy file command
-        copy: src=/scripts/host.sh dest=/scripts/test
+        ansible.builtin.copy:
+          src=/scripts/host.sh
+          dest=/scripts/test
       - name: execute script command
-        ansible.builtin.command: udo sh  /scripts/host.sh
+        ansible.builtin.command: sudo /scripts/test/host.sh
   
